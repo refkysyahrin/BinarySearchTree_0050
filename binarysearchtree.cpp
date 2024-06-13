@@ -51,7 +51,7 @@ public:
         }
         else if (element > parent->info) // If the value in the data field pf the new node is greater than that of the parent
         {
-            parent->rightchild = newNode // Make te right child of the parent point to the  new node
+            parent->rightchild = newNode; // Make te right child of the parent point to the  new node
         }
     }
 
@@ -73,7 +73,7 @@ public:
 
 	void inorder(Node* ptr)
 	{
-		id (ROOT == NULL)
+		if (ROOT == NULL)
 		{
 			cout << "Tree is empty" << endl;
 			return;
@@ -88,7 +88,7 @@ public:
 
 	void preorder(Node* ptr)
 	{
-		if (ROOT == null)
+		if (ROOT == NULL)
 		{
 			cout << "Tree is empty" << endl;
 			return;
@@ -131,7 +131,7 @@ int main()
 		cout << "5. Exit" << endl;
 		cout << "\nEnter your choice (1-5) : ";
 
-		car ch;
+		char ch;
 		cin >> ch;
 		cout << endl;
 
@@ -145,53 +145,28 @@ int main()
 			obj.insert(word);
 			break;
 		}
-		case '2';
+		case '2':
 		{
 			obj.inorder(obj.ROOT);
 			break;
 		}
-		case '3';
+		case '3':
 		{
 			obj.preorder(obj.ROOT);
 			break;
 		}
-		case '4';
+		case '4':
 		{
 			obj.postorder(obj.ROOT);
 			break;
 		}
-		case '5';
+		case '5':
 			return 0;
 		defalt:
-		} 
 		{
 			cout << "Invalid option" << endl;
 			break;
 		}
-		}
+		} 
 	}
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+}
